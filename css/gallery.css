@@ -1,0 +1,50 @@
+*{  /*all elements*/
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: #fff;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 5%;
+}
+
+p {
+  text-align: center;
+}
+
+.navbar{
+  height: 1%;
+  display: flex; /*stack horizontally*/
+  align-items: center;
+  padding-top: 2%;
+  padding-left: 8%;
+
+}
+
+.gallery{
+  width: 75%;
+  min-height:5%;
+  margin:3% 0 0 20% ;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery .image{
+  position: relative;
+  width: 25%;
+  height:25%;
+  /* background: #fff; */
+  margin:0.5% 1%;
+  box-sizing: border-box;
+  display:inline-block;
+  text-align: center;
+
+}
+
+.gallery .image .imgbox img{
+  max-width: 100%;
+
+}

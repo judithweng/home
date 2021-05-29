@@ -1,0 +1,92 @@
+*{  /*all elements*/
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 100%;
+    /* height: 100%; */
+    background-color: #fff;
+
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    box-sizing:border-box;
+}
+
+.navbar{
+  height: 1%;
+  display: flex; /*stack horizontally*/
+  padding-top: 2%;
+  align-items: center;
+
+}
+
+.logo{
+  width:50px;
+  cursor:pointer;
+}
+
+
+.row{
+  display:flex;
+  /* height:100%; */
+  align-items: center;
+}
+
+.col{
+  flex-basis: 50%;
+}
+
+h1{
+  color: 'black';
+  font-size: 100px;
+}
+
+p{
+  color: 'black';
+  font-size: 18px;
+  line-height: 20px;
+}
+
+
+.card{
+  width:200px;
+  height:200px;
+  display: inline-block;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px 10px 10px;
+  background-size: cover;
+  transition:transform
+  0.5s;
+
+}
+
+.card1{
+  background-image:url(photos/snow.jpg);
+}
+
+.card2{
+  background-image:url(photos/philly.jpg);
+}
+
+.card3{
+  background-image:url(photos/looking.jpg);
+}
+
+.card4{
+  background-image:url(photos/StatueOfLiberty.jpg);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+
+h5{
+  color: #fff;
+  text-shadow: 0 0 5px #999;
+}
