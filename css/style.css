@@ -6,12 +6,11 @@
 
 .container{
     width: 100%;
-    /* height: 100%; */
     background-color: #fff;
 
     background-position: center;
     background-size: cover;
-    padding-left: 8%;
+    padding-left: 2%;
     box-sizing:border-box;
 }
 
@@ -19,6 +18,7 @@
   height: 1%;
   display: flex; /*stack horizontally*/
   padding-top: 2%;
+  padding-left:6%;
   align-items: center;
 
 }
@@ -31,19 +31,17 @@
 
 .row{
   display:flex;
-  /* height:100%; */
   align-items: center;
 }
 
 .col{
   flex-basis: 50%;
-  padding: 5% 0;
 }
 
 h1{
   color: 'black';
   font-size: 100px;
-  margin-left: 10%;
+  margin-left: 20%;
 
 }
 
@@ -51,46 +49,47 @@ p{
   color: 'black';
   font-size: 18px;
   line-height: 20px;
-  margin-left: 10%;
+  margin-left: 20%;
+}
+
+
+.image:hover{
+  transform:translateY(-10px);
 }
 
 
 .card{
-  width:200px;
-  height:200px;
+  min-height:5%;
   display: inline-block;
-  padding: 3% 3%;
   box-sizing: border-box;
-  cursor: pointer;
-  margin: 1% 2% 3% 1%;
+  margin: 3% 1%;
   background-size: cover;
+
+}
+
+.card .image{
+    cursor: pointer;
+  position: relative;
+  width: 35%;
+  height:35%;
+  margin:2% 2%;
+  box-sizing: border-box;
+  display:inline-block;
+  text-align: center;
   transition:transform
   0.5s;
 
 }
 
-.card1{
-  background-image:url(photos/snow.jpg);
-}
+.card .image .imgbox img{
+  max-width: 100%;
 
-.card2{
-  background-image:url(photos/philly.jpg);
-}
-
-.card3{
-  background-image:url(photos/looking.jpg);
-}
-
-.card4{
-  background-image:url(photos/StatueOfLiberty.jpg);
-}
-
-.card:hover{
-  transform:translateY(-10px);
 }
 
 
-h5{
-  color: #fff;
-  text-shadow: 0 0 5px #999;
+.top-left{
+  position: absolute;
+  top: 8%;
+  left: 9%;
+  color: #000000;
 }
