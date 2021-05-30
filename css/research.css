@@ -2,91 +2,46 @@
     margin:0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background-image: #fff;
 }
 
-.container{
-    width: 100%;
-    /* height: 100%; */
-    background-color: #fff;
+h1 {
+  text-align: center;
+  padding-top: 5%;
+}
 
-    background-position: center;
-    background-size: cover;
-    padding-left: 8%;
-    box-sizing:border-box;
+p {
+  text-align: center;
 }
 
 .navbar{
   height: 1%;
-  display: flex; /*stack horizontally*/
   padding-top: 2%;
-  align-items: center;
+  padding-left: 8%;
 
 }
 
-.logo{
-  width:50px;
-  cursor:pointer;
-}
-
-
-.row{
+.gallery{
+  width: 75%;
+  margin:3% 0 0 20% ;
   display:flex;
-  /* height:100%; */
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.col{
-  flex-basis: 50%;
-}
-
-h1{
-  color: 'black';
-  font-size: 100px;
-}
-
-p{
-  color: 'black';
-  font-size: 18px;
-  line-height: 20px;
-}
-
-
-.card{
-  width:200px;
-  height:200px;
-  display: inline-block;
-  padding: 15px 25px;
+.gallery .image{
+  position: relative;
+  min-width: 150px;
+  width: 25%;
+  height:25%;
+  margin:0.5% 1%;
   box-sizing: border-box;
-  cursor: pointer;
-  margin: 10px 15px 10px 10px;
-  background-size: cover;
-  transition:transform
-  0.5s;
+  display:inline-block;
+  text-align: center;
 
 }
 
-.card1{
-  background-image:url(photos/snow.jpg);
-}
+.gallery .image .imgbox img{
+  max-width: 100%;
 
-.card2{
-  background-image:url(photos/philly.jpg);
-}
-
-.card3{
-  background-image:url(photos/looking.jpg);
-}
-
-.card4{
-  background-image:url(photos/StatueOfLiberty.jpg);
-}
-
-.card:hover{
-  transform:translateY(-10px);
-}
-
-
-h5{
-  color: #fff;
-  text-shadow: 0 0 5px #999;
 }
