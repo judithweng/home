@@ -1,0 +1,136 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding a Pouch Pattern</title>
+  <link rel="stylesheet" href = "blog.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=python&amp;skin=sunburst">
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <br><br>
+    <a href="../research.html"> &larr;Back </a>
+  </div>
+
+  <div class='container'>
+    <h1>Coding a Pouch Pattern</h1>
+
+
+    <h2>1. Pattern of Pouch</h2>
+    <p>The pattern of the pouch is based on <a href=
+      'https://noodle-head.com/2012/06/open-wide-zippered-pouch-tutorial-size.html'>
+     noodlehead's tutorial </a> and is very simple. It consists of four rectangles
+      of the same size. Two of them are used for the exterior and the other two for the lining.
+      <br><br>
+       To prevent confusion, I will be referring to the dimensions of the pouch as
+      height, width, and depth--x,y, and z respectively-- while the dimensions
+      of the pattern, length and width, will be L and W.
+      <br><br>
+      Intuitively, I noticed that L, length of pattern, depends on height and depth, x and z, but not on width, y;
+      and W, the width, depends on width and depth, y and z, but not height, x.
+      This may not be 100% correct but serves the purposes with the numbers that I will be working with.
+      From this, I can write the following function
+      </p>
+      $$L(x,z) = ax + bz$$
+      $$W(y,z) = cy + dz$$
+      <p> where a, b, c and d are constants. These can be put in matrix form and using the dimensions
+        given in noodlehead's site, we can find the coefficients and then use this equation to create pouch patterns.
+
+        $$
+        \begin{bmatrix}
+        7 \\ 9 \\ 11 \\
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+        4.5 & 3.5 \\
+        6 & 4  \\
+        8.5 & 4.5 \\
+        \end{bmatrix}
+        \begin{bmatrix}
+        a \\ b \\
+        \end{bmatrix}
+        $$
+
+        $$
+        \begin{bmatrix}
+        10 \\ 12 \\ 14 \\
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+        5 & 3.5 \\
+        6.5 & 4  \\
+        8 & 4.5 \\
+        \end{bmatrix}
+        \begin{bmatrix}
+        c \\ d \\
+        \end{bmatrix}
+        $$
+
+        I used MATLAB to solve for the coefficients (download MATLAB file <a href='patterncalc.mlx'>here</a>)
+        and arrived to the following equations.
+        $$L(x,z) = 0.6847x + 1.1669z$$
+        $$W(y,z) = 0.7273y + 1.8182z$$
+
+
+      </p>
+
+
+        <!-- <pre class="prettyprint lang-scm">(friends 'of '(parentheses))</pre> -->
+
+
+      <h2>2. Fusion 360's API</h2>
+      <p>Autodesk Fusion is a design and modeling software. As read in the title,
+      Fusion has an application programing interface (API). This allows users to
+      access the features of the software through code. The language used for this project
+      was python. Even though Fusion has its own built in function to obtain user inputs,
+      I used tkinter library for the sake of simplicity. (Download the code
+      <a href="C:\Users\judit\AppData\Roaming\Autodesk\Autodesk Fusion 360\API\Scripts\pouch3\pouch3.py">here</a>) </p>
+      <figure>
+        <img src="pouch/window.PNG" >
+        <figcaption><i>When the code is run, a window pops up asking the user for three
+           inputs: <br>length, width, and depth of pouch</i></figcaption>
+      </figure>
+      <figure>
+        <img src="pouch/inputs.PNG" >
+        <figcaption><i>For example, if the user enters the dimensions of a small pouch</i></figcaption>
+      </figure>
+      <figure>
+        <img src="pouch/pattern.PNG" >
+        <figcaption><i>Then Fusion will draw the pattern of a small pouch from our reference</i></figcaption>
+      </figure>
+      <figure>
+        <img src="pouch/check.PNG" >
+        <figcaption><i>To check, click on a side of the rectangle and you should see its length
+        in the lower right corner.<br>As an alternative, use Inspect > Measure (as shown above) to check
+        the dimensions of the pattern</i></figcaption>
+      </figure>
+      <br><br>
+      <p>In the images above, the dimensions inputted were that of the small pouch.
+        It resulted in a rectangular pattern with dimensions of 7.222 inches by 10.079 inches.
+        This is very close to the pattern that was suggested, 7 inches by 10 inches. Similarly,
+        all other sizes obtained similar results.</p>
+
+      <h2>3. Next Steps</h2>
+      <p>
+        -Laser cut the pattern created in Fusion, sew it and see if it matches the dimensions inputed<br>
+        -Allow users to choose between standard and customizable sizes<br>
+        -Branch out to other patterns, specifically those with non-rectangular shapes
+       </p>
+
+
+
+
+  </div>
+
+</body>
+</html>

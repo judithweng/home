@@ -1,0 +1,54 @@
+*{  /*all elements*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: #fff;
+    box-sizing: border-box; /*include padding and margin*/
+}
+
+.navbar{
+  height: 1%;
+  display: flex; /*stack horizontally*/
+  align-items: center;
+  padding-top: 2%;
+  padding-left: 8%;
+
+}
+
+h1 {
+  text-align: center;
+  padding-top: 5%;
+}
+
+
+p {
+  text-align: justify;
+  margin-bottom: 5%;
+}
+
+.column {
+  /* margin-top:2%; */
+  float: left;
+  padding:2%;
+
+  width: 100%;
+}
+
+.left {
+  margin-left: 25%;
+  width: 18%;
+  background-color: black;
+}
+
+.right {
+  margin-left: 5%;
+  width: 35%;
+  background-color: red;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  /* content: ""; */
+  display: table;
+  clear: both;
+}
