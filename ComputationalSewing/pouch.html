@@ -23,10 +23,22 @@
   </div>
 
   <div class='container'>
+
     <h1>Coding a Pouch Pattern</h1>
+    
+    
+    <h2>Contents</h2>
+    <p>
+    <ol>
+      <li><a href=#pattern>Pattern of Pouch</a></li>
+      <li><a href=#fusion>Fusion 360's API</a></li>
+      <li><a href=#custom>Customized Pouch</a></li>
+      <!-- <li><a href=#last>Next Steps</a></li>      -->
+    </ol>
+    </p>
 
 
-    <h2>1. Pattern of Pouch</h2>
+    <h2 id="pattern">1. Pattern of Pouch</h2>
     <p>The pattern of the pouch is based on <a href=
       'https://noodle-head.com/2012/06/open-wide-zippered-pouch-tutorial-size.html'>
      noodlehead's tutorial </a> and is very simple. It consists of four rectangles
@@ -88,7 +100,7 @@
         <!-- <pre class="prettyprint lang-scm">(friends 'of '(parentheses))</pre> -->
 
 
-      <h2>2. Fusion 360's API</h2>
+      <h2 id="fusion">2. Fusion 360's API</h2>
       <p>Autodesk Fusion is a design and modeling software. As read in the title,
       Fusion has an application programing interface (API). This allows users to
       access the features of the software through code. The language used for this project
@@ -120,14 +132,56 @@
         This is very close to the pattern that was suggested, 7 inches by 10 inches. Similarly,
         all other sizes obtained similar results.</p>
 
-      <h2>3. Next Steps</h2>
+
+        
+      <h2 id="custom">3. Customized Pouch</h2>
       <p>
-        -Laser cut the pattern created in Fusion, sew it and see if it matches the dimensions inputed<br>
-        -Allow users to choose between standard and customizable sizes<br>
-        -Branch out to other patterns, specifically those with non-rectangular shapes
-       </p>
+        Now that the math and code are set, we can now create a customized pouch. I entered 
+        the dimensions of a 4x7x5 in pouch and the code produced a pouch pattern with 
+        dimensions of 8.641x14.294 in. </p>
+        <figure>
+        <img src="pouch/dim.PNG" >
+        <figcaption><i>Height: 4in, Width: 7in, and Depth: 5in</i></figcaption>
+        </figure>
+ 
+        <figure>
+          <img src="pouch/custompatt.PNG" >
+          <figcaption><i>Length: 8.641in, Width: 14.294in</i></figcaption>
+          </figure>
 
+       
 
+        <p>
+          The dimensions were used to cut a piece of fabric using a laser cutter. The speed
+          and power of the laser was changed to cut the cloth properly. Temporary glue was 
+          used to put the piece of fabric on top of a piece of wood so that it remained flat
+          during the cutting process.
+        </p>
+
+        <figure>
+          <img src="pouch/laser.jpg" >
+          <figcaption><i>Laser cut fabric</i></figcaption>
+        </figure>
+
+        
+        <p>
+          The pieces were sewn together using a sewing machine as instructed in the tutorial.
+          Some modifications were made such as sewing the zipper inside the pouch so that it
+          does not stick out and the seam allowance was decreased to 3/8". The latter one was
+          done because the temporary glue on the fabric made the fabric stick or move not as 
+          smoothly on the sewing machine. Decreasing the seam allowance seemed to help with 
+          this issue.
+        </p>
+
+                <!-- image -->
+      
+      <p><b>Results:</b> <br>The final dimensions of the pouch were 4.75x8x5 in. 
+        The pouch created did not have the exact dimensions as what was inputted and 
+        were roughly an inch larger than expected. The depth was 
+        accurate since this had to be measured when the pieces were sewn together. The inaccuracies
+        might have come from the fact that the seam allowance was changed. To solve this,
+        the fabric should be washed, to remove the glue, before it's sewn. 
+      </p>
 
 
   </div>
