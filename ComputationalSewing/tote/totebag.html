@@ -1,0 +1,164 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Making a Tote Bag</title>
+  <link rel="stylesheet" href = "../blog.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="~/Documents/MyWebsite/index.html">Home</a>
+    <br><br>
+    <a href="../compsewhome.html"> &larr;Back </a>
+  </div>
+
+  <div class='container'>
+    <h1>Making a Tote Bag</h1>
+    <p><i>(The following is not a tutorial but a reflection of my results. Click
+      <a href="https://www.youtube.com/watch?v=7lr8VnSXe9I">here</a>
+    to access the tutorial and pattern used.)</i> </p>
+
+    <h2>1. Pattern Design</h2>
+    <p>The pattern of the tote bag consisted of rectangles and linear shapes. 
+      The bag's pattern was a rectangle with squares cut at the corners. The pattern
+      includes a 1/4" seam allowance. Designing the pattern from the height, width, and pattern 
+      of the tote bag is pretty straightforward.
+      The depth of the bag is the corner’s side length minus the seam, then multiplied by two.
+      The height of the bag is the height of the pattern minus the corner’s side length.
+      The width of the bag is the width of the pattern minus twice the quantity 
+      of the corner’s side length and seam allowance.
+      <BR>
+        <figure>
+          <img src="totesketch.jpg" style='width:65%;'>
+          <figcaption><i>Sketch of pattern and tote bag</i></figcaption>
+        </figure>
+        <BR>
+      </p>
+      <p>
+      The straps were kept the same length. While the pockets were calculated in 
+      proportion to the measurements given in the tutorial. The zipper had the 
+      same width as the bag’s pattern. The outside pocket also had the same 
+      width as the bag, and a 70% of the bag pattern height. The interior pocket had 60% of the 
+      bag pattern width and 90% of the bag pattern height. 
+      <br><br>
+      <b>Summary:</b><br>
+      x = height of bag (input height)<br>
+      y = width of bag (input width)<br>
+      z = depth of bag (input depth)<br>
+      s = seam allowance <br>
+      H = height of bag pattern<br>
+      W = width of bag pattern<br>
+      C = corner side length<br><br>
+
+      For the bag's main pattern:
+      $$C(s,z) = 0.5z + s$$
+      $$W(C,s,y) = y + 2\cdot(s+C(s,z))$$
+      $$H(C,x) = x + C(s,z)$$
+
+      For the outside pocket:
+      $$Outside Pocket Height = 0.7\cdot H(C,x)$$
+      $$Outside Pocket Width = W(C,s,y)$$
+
+      For the interior pocket:
+      $$Interior Pocket Height = 0.9\cdot H(C,x)$$
+      $$Interior Pocket Width = 0.6\cdot W(C,s,y)$$
+
+    </p>
+
+
+
+    
+    
+    <h2>2. Autodesk Fusion Code</h2>
+    <p>
+      For rectangular patterns, I just used the fusion’s built in function to create a 
+      rectangle. For the bag’s pattern, I had to draw lines through each point. 
+      There was not a function that could reflect the lines drawn, but there was a 
+      constraint function. I drew half of the bag’s pattern and drew the same exact lines 
+      on top again. The copies would have this constraint function which was that they 
+      should be symmetrical to the y-axis.<br>
+      
+      I also coded the pattern in two different files. One file is for the patterns 
+      using the lining and the other one for the outer fabric. This makes things easier 
+      when it comes to laser cutting.<br>
+    </p>
+    <video width=50% autoplay>
+      <source src="ToteBagDemo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+    
+    
+    <h2>3. Laser Cutting</h2>
+    <p>
+      Unlike the pouch pattern, I made the tote’s pattern three dimensional in fusion. 
+      It had a slight thickness, reflecting the thickness of the fabric. I did this 
+      because it will help in future designs to import it into other software programs. 
+      This created a problem when laser cutting since the pattern was not in 2D. One way 
+      to solve this is to make these bodies into components and then select these components 
+      to create a drawing. When the drawing is created, you can select which point of view 
+      you want. These can then be exported as a PDF file and then laser cut.<br>
+    </p>
+    
+    <figure>
+      <img src="laser.jpg" >
+      <figcaption><i>Laser cutting fabric</i></figcaption>
+    </figure>
+    
+    
+    <h2>4. Custom Tote Bag</h2>
+    <p>
+      I decided to make a bag 14” tall, 13” wide and 2” deep, without an outer pocket. 
+      I used an old gap dress and removed the zipper and used that for my tote bag. 
+      I accidentally cut the dress 
+      wrong which left me with not enough fabric for the back side of the tote. I decided 
+      to use an old shirt of mine.
+      </p>
+      <figure>
+        <img src="gapdress.jpg" style='width:25%;'>
+        <img src='shirt.jpg' style='width:25%;'>
+        <figcaption><i>Fabrics used</i></figcaption>
+      </figure> 
+      
+      <p>
+        Turns out that the shirt I used had a very stretchy fabric. This was difficult to work with
+        because the fabric will stretch and move around easily.</p>
+        <figure>
+        <img src="stretched.jpg" style='width:25%;'>
+        <img src="strap.jpg" style='width:25%;'>
+        <figcaption><i>Stretched fabric created inconsistencies</i></figcaption>
+        </figure>
+      <p>
+      Other than that, the process was very 
+      straightforward. I made some adjustments, such as not using interfacing fabric and 
+      not folding the inner pocket in half because it turned out smaller than what I expected. 
+      The dimensions of the bag matched the inputs expected.
+      </p>
+      
+      <figure>
+        <img src="front.jpg" style='width:25%;'>
+        <img src='back.jpg' style='width:25%;'>
+        <figcaption><i>Front and back of tote bag created</i></figcaption>
+
+        <br>
+      </figure>
+
+
+    
+    
+    
+    
+    
+    
+  </div>
+
+</body>
+</html>
