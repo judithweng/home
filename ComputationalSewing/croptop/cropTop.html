@@ -1,0 +1,99 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Making a Tote Bag</title>
+  <link rel="stylesheet" href = "../blog.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="../../index.html">Home</a>
+    <br><br>
+    <a href="../compsewhome.html"> &larr;Back </a>
+  </div>
+
+  <div class='container'>
+    <h1>Making a Crop Top</h1>
+    <p><i>(The following is not a tutorial but a reflection of my results. Click
+      <a href="https://www.youtube.com/watch?v=3JqDKbodHD4">here</a>
+    to access the tutorial and pattern used.)</i> </p>
+
+    <h2>1. Pattern Design</h2>
+    <p>The pattern of the crop top consisted in straight lines and curves.
+        I drew one half of the top and then mirrored it to complete the top.
+        I selected key points on each line and then determined a path for each point
+        given a size input.
+      <BR>
+        <figure>
+          <img src="fusion_model.PNG" style='width:65%;'>
+          <figcaption><i>Pattern design on Fusion</i></figcaption>
+        </figure>
+        <BR>
+      </p>
+    
+    
+    <h2>2. Autodesk Fusion Code and CLO3D</h2>
+    <p>
+     The curves of the top were made using the spline built in function in Fusion.
+     I also used the canvas feature to import the pdf pattern so that it is easier
+     to sketch the pattern onto fusion. <br>
+     After coding the pattern, I tested it using CLO3D. I was able to create an avatar
+     with the dimensions I wanted and made a crop top for those dimensions. This software
+     was useful to test out different sizes without actually making them in real life.
+    </p>
+    <video width=50% autoplay>
+      <source src="3D_demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+    
+    
+    
+    <h2>3. Custom Crop Top</h2>
+    <p>
+      I decided to make a top for myself, 
+      </p>
+      <figure>
+        <img src="back.jpg" style='width:25%;'>
+        <img src='front.jpg' style='width:25%;'>
+        <figcaption><i>Customized Crop Top</i></figcaption>
+      </figure> 
+      
+      <p>
+        I used an old shirt that had painted lettering. This made it slightly difficult
+        to fold the fabric, which led to slighlty uneven sleeves. In addition,
+        there is a slight indent in the neck when it starts to curve. I have seen 
+        in other tutorials that one should normally cut the fabric to release tension.
+        This step was not shown in the tutorial but it should be important to do.
+    </p>
+        <figure>
+        <img src="neck.jpg" style='width:25%;'>
+        <img src="sleeves.jpg" style='width:25%;'>
+        <figcaption><i>STension in fabric and uneven sleeves</i></figcaption>
+        </figure>
+      <p>
+      The calculations of the top were pretty accurate. One downside is that a lot of time
+      was spent picking points and calculating how they change. One way to improve this might
+      be making Fusion select the key points rather than manually selecting them.
+      </p>
+
+
+
+    
+    
+    
+    
+    
+    
+  </div>
+
+</body>
+</html>
