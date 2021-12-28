@@ -7,10 +7,13 @@
 
 
 .navbar{
-  height: 1%;
+  /* height: 1%; */
   padding-top: 2%;
   padding-left:8%;
+  /* padding-bottom: 5%; */
   align-items: center;
+  display: inline-block;
+  vertical-align: top;
 
 }
 
@@ -19,12 +22,16 @@
   margin:3%;
   text-align: center;
   align-items: center;
+  display: inline-block;
+  vertical-align: top;
+
 
 }
 
 h2{
   margin: 3% 0 1% 20%;
   text-align:left;
+
 }
 
 p{
@@ -54,7 +61,14 @@ th, td {
 }
 
 
-ol{
- margin-left: 30% ;
+ul{
+ /* margin-left: 30% ; */
+ padding: 8%;
  text-align:left;
 }
+
+ol{
+  margin-left: 30%;
+  text-align:left;
+}
+
