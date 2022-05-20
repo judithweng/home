@@ -63,7 +63,7 @@ p{
 
 .card .image{
   position: relative;
-  min-width: 20%;
+  min-width: 200px;
   width: 35%;
   height:35%;
   margin:2% 2%;
