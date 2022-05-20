@@ -41,8 +41,16 @@ p{
 
 img{
   width:35%;
+  min-width: 200px;
   margin: 1% 0.5% 0 0.5%;
 
+}
+
+figcaption{
+  /* text-align: center; */
+  align-items: center;
+  width: 30%;
+  margin: 0 35%;
 }
 
 .container .row{
