@@ -24,3 +24,12 @@ h1 {
   padding: 4% 20%; 
 
 }
+
+p{
+  margin: 1% 20%;
+  text-align:justify;
+}
+
+ul{
+  margin: 1% 20%;
+}
