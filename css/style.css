@@ -1,8 +1,9 @@
 *{  /*all elements*/
-    margin:0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 800;
+  margin:0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  box-sizing: border-box;
 }
 
 .container{
@@ -26,11 +27,13 @@
 .row{
   display:flex;
   align-items: center;
+  flex-wrap: wrap; /* allow columns to wrap on narrow screens */
 }
 
 .col{
   flex-basis: 50%;
   padding: 1%;
+  min-width: 0; /* allow columns to shrink instead of forcing overflow */
 }
 
 h1{
@@ -54,7 +57,7 @@ p{
 
 
 .card{
-  min-width: 20%;
+  min-width: 0;
   display: inline-block;
   box-sizing: border-box;
   margin: 2% 1%;
@@ -64,15 +67,14 @@ p{
 
 .card .image{
   position: relative;
-  min-width: 200px;
+  min-width: 0;
   width: 35%;
-  height:35%;
+  /* avoid fixed heights so images can scale */
   margin:2% 2%;
   box-sizing: border-box;
   display:inline-block;
   text-align: center;
-  transition:transform
-  0.5s;
+  transition: transform 0.5s;
 
 }
 
@@ -89,4 +91,39 @@ p{
   /* right: 9%; */
   color: #000000;
   font-size: 100%;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .col {
+    flex-basis: 100%;
+    padding: 4%;
+    margin: 0;
+  }
+
+  h1, p {
+    margin-left: 5%;
+  }
+
+  .card {
+    width: 100%;
+    margin: 1% 0;
+  }
+
+  .card .image{
+    display: block;
+    width: 100%;
+    margin: 6% 0;
+  }
+
+  .card .image .imgbox img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
